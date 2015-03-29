@@ -175,6 +175,10 @@ public class Utility {
         return context.getString(R.string.format_temperature, temp);
     }
 
+    public static String formatTemperature(Context context, double temperature) {
+        return formatTemperature(context, temperature, Utility.isMetric(context));
+    }
+
     /**
      * Helper method to provide the icon resource id according to the weather condition id returned
      * by the OpenWeatherMap call.
